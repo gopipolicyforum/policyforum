@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>policyforum.site</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#c1121f;
+  --text:#111;
+  --muted:#6b6b6b;
+}
+
+body{
+  margin:0;
+  background:#fff;
+  color:var(--text);
+  font-family:"Inter", sans-serif;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:100px 20px;
+  text-align:center;
+}
+
+/* Heading */
+.hero-heading{
+  font-family:"Playfair Display", serif;
+  font-size:3rem;
+  line-height:1.2;
+}
+
+.hero-heading span{
+  opacity:0;
+  display:inline-block;
+  transform:translateY(20px);
+  animation:fadeUp 0.6s forwards;
+}
+
+/* delays */
+.hero-heading span:nth-child(n){
+  animation-delay: calc(0.05s * var(--i));
+}
+
+.dot{
+  color:var(--red);
+}
+
+/* Subtext */
+.subtext{
+  margin-top:20px;
+  color:var(--muted);
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.6;
+}
+
+/* Form */
+form{
+  margin-top:50px;
+  text-align:left;
+  max-width:500px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+input, textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #e5e5e5;
+  border-radius:6px;
+  font-size:0.95rem;
+  transition:all 0.3s ease;
+}
+
+input:focus, textarea:focus{
+  outline:none;
+  border-color:var(--red);
+  box-shadow:0 0 0 2px rgba(193,18,31,0.1);
+}
+
+textarea{
+  height:110px;
+  resize:none;
+}
+
+/* Button */
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:6px;
+  background:var(--red);
+  color:#fff;
+  font-size:1rem;
+  cursor:pointer;
+  transition:all 0.25s ease;
+}
+
+button:hover{
+  background:#a50f1a;
+  transform:translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Animated Heading -->
+  <h1 class="hero-heading">
+    <span style="--i:1">P</span><span style="--i:2">o</span><span style="--i:3">l</span><span style="--i:4">i</span><span style="--i:5">c</span><span style="--i:6">y</span>
+    <span class="dot" style="--i:7">.</span>
+    <span style="--i:8"> </span>
+    <span style="--i:9">P</span><span style="--i:10">o</span><span style="--i:11">w</span><span style="--i:12">e</span><span style="--i:13">r</span>
+    <span class="dot" style="--i:14">.</span>
+    <span style="--i:15"> </span>
+    <span style="--i:16">P</span><span style="--i:17">e</span><span style="--i:18">r</span><span style="--i:19">s</span><span style="--i:20">p</span><span style="--i:21">e</span><span style="--i:22">c</span><span style="--i:23">t</span><span style="--i:24">i</span><span style="--i:25">v</span><span style="--i:26">e</span>
+    <span class="dot" style="--i:27">.</span>
+  </h1>
+
+  <p class="subtext">
+    Independent political analysis exploring the intersection of policy, influence, and narrative.
+  </p>
+
+  <!-- Web3Forms Integration -->
+  <form action="https://api.web3forms.com/submit" method="POST">
+    
+    <!-- REQUIRED -->
+    <input type="hidden" name="access_key" value="4c8f65a2-834b-496a-87f4-500d8d891a21">
+
+    <!-- Inputs -->
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email" required>
+    <textarea name="message" placeholder="What kind of perspectives are you looking for?" required></textarea>
+
+    <button type="submit">Request Access</button>
+  </form>
+
+</div>
+
+</body>
+</html>
